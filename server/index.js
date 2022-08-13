@@ -3,6 +3,7 @@ const { graphqlHTTP } = require('express-graphql');
 const cors = require('cors');
 const schema = require('./schema');
 const users = [{ id: 1, username: 'Tom', age: 21 }];
+
 const app = express();
 app.use(cors());
 
@@ -13,7 +14,6 @@ const createUser = input => {
     ...input,
   };
 };
-
 const root = {
   getAllUsers: () => {
     return users;

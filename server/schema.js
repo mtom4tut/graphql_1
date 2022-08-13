@@ -2,7 +2,7 @@ const { buildSchema } = require('graphql');
 
 const schema = buildSchema(`
   type User {
-    id: ID,
+    id: ID
     username: String
     age: Int
     posts: [Post]
@@ -14,7 +14,7 @@ const schema = buildSchema(`
   }
 
   input UserInput {
-    id: ID,
+    id: ID
     username: String!
     age: Int!
     posts: [PostInput]
@@ -33,6 +33,6 @@ const schema = buildSchema(`
   type Mutation {
     createUser(input: UserInput): User
   }
-`)
+`);
 
-module.exports = schema
+module.exports = schema;
